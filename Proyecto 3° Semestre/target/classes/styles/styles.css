@@ -1,0 +1,115 @@
+.root {
+    -fx-background-color: #fdeaf5;
+    -fx-font-family: "Garamond";
+}
+
+/* ---------- TEXTOS ---------- */
+.titulo {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8b3c6f;
+}
+
+.frase {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6d4a5c;
+}
+
+/* ---------- BOTONES ---------- */
+.boton-principal {
+    -fx-background-color: #c97aa6;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+}
+
+.boton-principal:hover {
+    -fx-background-color: #b56591;
+}
+
+.menu-boton {
+    -fx-background-color: #d88bb2;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 15;
+    -fx-cursor: hand;
+}
+
+.menu-boton:hover {
+    -fx-background-color: #e7a1c4;
+}
+
+/* ---------- BARRAS ---------- */
+.barra {
+    -fx-background-color: #f8d9ea;
+}
+/* ===== DIALOGOS PERSONALIZADOS ===== */
+
+.dialogo {
+    -fx-font-family: "Garamond";
+}
+
+.dialog-pane {
+    -fx-background-color: #fffafc;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #ff66a3;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.dialog-pane .content.label {
+    -fx-text-fill: #444;
+    -fx-font-size: 14px;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: #ff66a3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-padding: 8 20;
+}
+
+.dialog-pane .button-bar .button:hover {
+    -fx-background-color: #ff3385;
+}
+/* ALERTA FLORES ETERNAS */
+.dialogo-flores {
+    -fx-background-color: #fff0f6;
+}
+
+.dialogo-flores .header-panel {
+    -fx-background-color: #ff66a3;
+}
+
+.dialogo-flores .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.dialogo-flores .content {
+    -fx-text-fill: #444;
+    -fx-font-size: 14px;
+}
+
+.dialogo-flores .button {
+    -fx-background-color: #ff66a3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+}
+
+.dialogo-flores .button:hover {
+    -fx-background-color: #ff3385;
+}
