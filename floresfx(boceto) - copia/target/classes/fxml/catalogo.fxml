@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controllers.CatalogoController"
+            stylesheets="@/styles/styles.css">
+
+    <!-- Barra superior -->
+    <top>
+        <HBox spacing="15"
+              alignment="CENTER_LEFT"
+              styleClass="barra">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <!-- LOGO CLICKEABLE -->
+            <ImageView fx:id="logoMenu"
+                       fitWidth="60"
+                       preserveRatio="true"
+                       onMouseClicked="#toggleMenu">
+                <image>
+                    <Image url="@/images/logo.jpeg"/>
+                </image>
+            </ImageView>
+
+            <!-- TÍTULO -->
+            <Label text="Creaciones Eternas"
+                   styleClass="titulo"/>
+        </HBox>
+    </top>
+
+    <!-- Menú lateral oculto -->
+    <left>
+        <VBox fx:id="menuLateral"
+              spacing="20"
+              style="-fx-background-color: #e7a1c4; -fx-padding: 15;"
+              visible="false"
+              managed="false">
+
+            <Button text="Inicio" onAction="#volverInicio" styleClass="menu-boton"/>
+            <Button text="Catálogo" onAction="#irCatalogo" styleClass="menu-boton"/>
+            <Button text="Conocer la empresa" onAction="#conocerEmpresa" styleClass="menu-boton"/>
+            <Button text="Realizar pedido" onAction="#realizarPedido" styleClass="menu-boton"/>
+            <Button text="Salir" onAction="#salir" styleClass="menu-boton"/>
+        </VBox>
+    </left>
+
+    <!-- Catálogo -->
+    <center>
+        <ScrollPane fitToWidth="true">
+            <FlowPane fx:id="contenedor"
+                      hgap="20"
+                      vgap="20"
+                      alignment="CENTER"
+                      prefWrapLength="900">
+
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+
+                <!-- IMAGENES ORIGINALES (no se borran) -->
+                <VBox alignment="CENTER" spacing="10" styleClass="tarjeta">
+                    <ImageView fitWidth="200" preserveRatio="true">
+                        <image>
+                            <Image url="@/images/flor1.jpeg"/>
+                        </image>
+                    </ImageView>
+                    <Label text="Arreglo Floral"/>
+                </VBox>
+
+                <VBox alignment="CENTER" spacing="10" styleClass="tarjeta">
+                    <ImageView fitWidth="200" preserveRatio="true">
+                        <image>
+                            <Image url="@/images/flor2.jpeg"/>
+                        </image>
+                    </ImageView>
+                    <Label text="Ramo Especial"/>
+                </VBox>
+
+                <VBox alignment="CENTER" spacing="10" styleClass="tarjeta">
+                    <ImageView fitWidth="200" preserveRatio="true">
+                        <image>
+                            <Image url="@/images/flor3.jpeg"/>
+                        </image>
+                    </ImageView>
+                    <Label text="Detalle Eterno"/>
+                </VBox>
+
+            </FlowPane>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

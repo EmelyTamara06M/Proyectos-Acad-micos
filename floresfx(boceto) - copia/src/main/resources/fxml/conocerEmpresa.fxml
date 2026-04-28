@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controllers.ConocerEmpresaController"
+            stylesheets="@/styles/styles.css">
+
+    <!-- Barra superior -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="15" styleClass="barra">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button text="← Volver" onAction="#volverCatalogo"  styleClass="boton-principal"/>
+            <Label text="Conocer la Empresa" styleClass="titulo"/>
+        </HBox>
+    </top>
+
+    <!-- Contenido -->
+    <center>
+        <VBox spacing="15" alignment="CENTER" maxWidth="700">
+            <padding>
+                <Insets top="40"/>
+            </padding>
+
+            <Label text="Creaciones Eternas"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+            
+            <ImageView fitWidth="180" preserveRatio="true">
+            <image>
+            <Image url="/images/emprendedora.jpeg"/>
+            </image>
+            </ImageView>
+            <Label wrapText="true" textAlignment="CENTER"
+                   text="Creaciones Eternas es un emprendimiento dedicado a la creación de arreglos florales preservados, diseñados para conservar emociones y momentos especiales en el tiempo."/>
+
+            <Label wrapText="true" textAlignment="CENTER"
+                   text="Cada diseño es elaborado con amor, creatividad y dedicación, ofreciendo productos únicos que no se marchitan."/>
+
+            <Label wrapText="true" textAlignment="CENTER"
+                   text="Este emprendimiento fue creado por Cristel Chancay, una joven emprendedora de 19 años, apasionada por el arte floral y el diseño."/>
+    
+
+        </VBox>
+    </center>
+
+</BorderPane>

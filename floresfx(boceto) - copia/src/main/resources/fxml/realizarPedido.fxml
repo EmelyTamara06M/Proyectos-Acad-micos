@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="application.controllers.RealizarPedidoController"
+            stylesheets="@/styles/styles.css">
+
+    <!-- Barra superior -->
+    <top>
+        <HBox spacing="15" alignment="CENTER_LEFT" styleClass="barra">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button text="← Volver"
+                    onAction="#volverCatalogo"
+                    styleClass="boton-principal"/>
+
+            <Label text="Realizar Pedido"
+                   styleClass="titulo"/>
+        </HBox>
+    </top>
+
+    <!-- Contenido -->
+    <center>
+        <ScrollPane fitToWidth="true">
+            <VBox spacing="15"
+                  alignment="CENTER"
+                  maxWidth="500">
+
+                <padding>
+                    <Insets top="30" bottom="30"/>
+                </padding>
+
+                <!-- DATOS DEL CLIENTE -->
+                <Label text="Datos del Cliente"
+                       style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+                <!-- 🔹 fx:id AGREGADOS -->
+                <TextField fx:id="txtNombre"
+                           promptText="Nombre del cliente"/>
+
+                <TextField fx:id="txtTelefono"
+                           promptText="Teléfono"/>
+
+                <TextField fx:id="txtDireccion"
+                           promptText="Dirección"/>
+
+                <!-- DETALLE DEL PEDIDO -->
+                <Label text="Detalle del pedido"
+                       style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+                <!-- CONTENEDOR DE RAMOS -->
+                <VBox fx:id="contenedorPedidos"
+                      spacing="10"
+                      alignment="CENTER"
+                      maxWidth="480"/>
+
+                <!-- 🔹 fx:id AGREGADO -->
+                <TextArea fx:id="txtDetalle"
+                          promptText="Describe el pedido..."
+                          prefRowCount="4"/>
+
+                <!-- 🔹 onAction AGREGADO -->
+                <Button text="Confirmar Pedido"
+                        onAction="#confirmarPedido"
+                        styleClass="boton-principal"/>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
+
+
